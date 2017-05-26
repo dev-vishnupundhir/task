@@ -21,26 +21,26 @@ class MembersController extends AppController
         $this->Auth->allow(['checkStatus','voiceCalling','rateUserProfile']);
     }
 
-    public function initialize()
-    {
-        parent::initialize();
-        $this->loadComponent('Auth', [
-            'loginAction' => [
-                'controller' => 'home',
-                'action' => 'login',
-            ],
-            'authError' => 'Did you really think you are allowed to see that?',
-            'authenticate' => [
-                'Form' => [
-                    'fields' => ['username' => 'email', 'password' => 'password'],
-                    // 'userModel' => 'Admins',
-                    // 'finder' => 'auth'
-                ]
-            ],
-            'storage' => 'Session'
-        ]);
-    }
-    
+    // public function initialize()
+    // {
+    //     parent::initialize();
+    //     $this->loadComponent('Auth', [
+    //         'loginAction' => [
+    //             'controller' => 'home',
+    //             'action' => 'login',
+    //         ],
+    //         'authError' => 'Did you really think you are allowed to see that?',
+    //         'authenticate' => [
+    //             'Form' => [
+    //                 'fields' => ['username' => 'email', 'password' => 'password'],
+    //                 // 'userModel' => 'Admins',
+    //                 // 'finder' => 'auth'
+    //             ]
+    //         ],
+    //         'storage' => 'Session'
+    //     ]);
+    // }
+    hello
     public function userDashboard($element = null)
     {
         $this->set('title','Friendoz | User Dashboard');
